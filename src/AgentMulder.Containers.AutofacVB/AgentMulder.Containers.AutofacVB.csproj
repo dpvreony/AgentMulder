@@ -31,33 +31,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Autofac">
-      <HintPath>..\packages\Autofac.2.6.3.862\lib\NET40\Autofac.dll</HintPath>
-    </Reference>
-    <Reference Include="JetBrains.Platform.ReSharper.ProjectModel">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\JetBrains\ReSharper\v6.1\SDK\Bin\JetBrains.Platform.ReSharper.ProjectModel.dll</HintPath>
-    </Reference>
-    <Reference Include="JetBrains.Platform.ReSharper.Util">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\JetBrains\ReSharper\v6.1\SDK\Bin\JetBrains.Platform.ReSharper.Util.dll</HintPath>
-    </Reference>
-    <Reference Include="JetBrains.ReSharper.Psi">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\JetBrains\ReSharper\v6.1\SDK\Bin\JetBrains.ReSharper.Psi.dll</HintPath>
-    </Reference>
-    <Reference Include="JetBrains.ReSharper.Psi.CSharp">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\JetBrains\ReSharper\v6.1\SDK\Bin\JetBrains.ReSharper.Psi.CSharp.dll</HintPath>
-    </Reference>
-    <Reference Include="JetBrains.ReSharper.Psi.Services">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\JetBrains\ReSharper\v6.1\SDK\Bin\JetBrains.ReSharper.Psi.Services.dll</HintPath>
-    </Reference>
-    <Reference Include="JetBrains.ReSharper.Psi.Services.CSharp">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\JetBrains\ReSharper\v6.1\SDK\Bin\JetBrains.ReSharper.Psi.Services.CSharp.dll</HintPath>
-    </Reference>
-    <Reference Include="JetBrains.ReSharper.Psi.Services.VB">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\JetBrains\ReSharper\v6.1\SDK\Bin\JetBrains.ReSharper.Psi.Services.VB.dll</HintPath>
-    </Reference>
-    <Reference Include="JetBrains.ReSharper.Psi.VB">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\JetBrains\ReSharper\v6.1\SDK\Bin\JetBrains.ReSharper.Psi.VB.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
