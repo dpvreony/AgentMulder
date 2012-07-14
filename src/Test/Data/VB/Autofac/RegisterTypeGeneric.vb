@@ -1,5 +1,4 @@
 ﻿Imports Autofac
-Imports TestApplicationVB.Types
 
 Namespace Autofac
     Public Class RegisterTypeGeneric
@@ -9,5 +8,8 @@ Namespace Autofac
             builder.RegisterType(Of CommonImpl1)()
         End Sub
 
+    End Class
+
+    Public Class CommonImpl1
     End Class
 End Namespace

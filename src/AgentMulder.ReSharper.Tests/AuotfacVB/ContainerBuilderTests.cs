@@ -39,7 +39,7 @@ namespace AgentMulder.ReSharper.Tests.AuotfacVB
                 Assert.AreEqual(codeFiles.Length, registrations.Count());
                 foreach (var codeFile in codeFiles)
                 {
-                    codeFile.ProcessChildren<ITypeDeclaration>(declaration =>
+                    codeFile.ProcessChildren<ITypeDeclaration>(declaration => 
                         Assert.That(registrations.Any((r => r.Registration.IsSatisfiedBy(declaration.DeclaredElement)))));
                 }
             });
