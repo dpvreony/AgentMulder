@@ -49,26 +49,25 @@ namespace AgentMulder.ReSharper.Plugin.Components
                 return FindExecution.Continue;
             });
 
-            DoSearch(patern.Matcher, consumer);
+            DoSearch(patern, consumer);
 
             return results;
         }
 
-        private void DoSearch(IStructuralMatcher matcher, FindResultConsumer<IStructuralMatchResult> consumer)
+        private void DoSearch(IRegistrationPattern pattern, FindResultConsumer<IStructuralMatchResult> consumer)
         {
 #if SDK70
             ISolution solution = Shell.Instance.GetComponent<SolutionsManager>().Solution;
 #else
             ISolution solution = Shell.Instance.GetComponent<ISolutionManager>().CurrentSolution;
 #endif
-
+            
             var searchDomain = searchDomainFactory.CreateSearchDomain(solution, false);
             var documentManager = solution.GetComponent<DocumentManager>();
 
-            // todo add support for VB (eventually)
-            var structuralSearcher = new StructuralSearcher(documentManager, VBLanguage.Instance, matcher);
+            var structuralSearcher = new StructuralSearcher(documentManager, pattern.Language, pattern.Matcher);
             var searchDomainSearcher = new StructuralSearchDomainSearcher<IStructuralMatchResult>(
-                NarrowSearchDomain(solution, matcher.Words, matcher.GetExtendedWords(solution), searchDomain),
+                NarrowSearchDomain(solution, pattern.Matcher.Words, pattern.Matcher.GetExtendedWords(solution), searchDomain),
                 structuralSearcher, consumer, NullProgressIndicator.Instance, true);
             searchDomainSearcher.Run();
         }

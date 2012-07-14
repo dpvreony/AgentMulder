@@ -3,15 +3,23 @@ using System.Collections.Generic;
 using System.Linq;
 using AgentMulder.ReSharper.Domain.Registrations;
 using AgentMulder.ReSharper.Domain.Utils;
+using JetBrains.ReSharper.Psi;
 using JetBrains.ReSharper.Psi.CSharp.Tree;
 using JetBrains.ReSharper.Psi.Services.StructuralSearch;
 using JetBrains.ReSharper.Psi.Tree;
+using JetBrains.Util;
 
 namespace AgentMulder.ReSharper.Domain.Patterns
 {
     public abstract class RegistrationPatternBase : IRegistrationPattern
     {
+        private readonly IStructuralSearchPattern pattern;
         private readonly IStructuralMatcher matcher;
+
+        public PsiLanguageType Language
+        {
+            get { return pattern.Language; }
+        }
 
         public IStructuralMatcher Matcher
         {
@@ -20,11 +28,8 @@ namespace AgentMulder.ReSharper.Domain.Patterns
 
         protected RegistrationPatternBase(IStructuralSearchPattern pattern)
         {
+            this.pattern = pattern;
             matcher = pattern.CreateMatcher();
-            if (pattern.Check() != null)
-            {
-                throw new Exception(pattern.SearchPattern);
-            }
         }
 
         private IInvocationExpression GetMatchedExpression(ITreeNode element)
