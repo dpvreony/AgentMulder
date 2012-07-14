@@ -7,8 +7,6 @@ using AgentMulder.ReSharper.Plugin.Components;
 using JetBrains.Application.Components;
 using JetBrains.ProjectModel;
 using JetBrains.ReSharper.Psi;
-using JetBrains.ReSharper.Psi.CSharp;
-using JetBrains.ReSharper.Psi.CSharp.Tree;
 using JetBrains.ReSharper.Psi.Search;
 using JetBrains.ReSharper.Psi.VB;
 using JetBrains.ReSharper.Psi.VB.Tree;
@@ -19,6 +17,7 @@ using NUnit.Framework;
 namespace AgentMulder.ReSharper.Tests
 {
     [TestFixture]
+    [TestFileExtension(VBProjectFileType.VB_EXTENSION)]
     public abstract class ComponentRegistrationsTestBaseVB : BaseTestWithSingleProject
     {
         protected abstract IContainerInfo ContainerInfo { get; }
@@ -26,6 +25,11 @@ namespace AgentMulder.ReSharper.Tests
         protected virtual string RelativeTypesPath
         {
             get { return "..\\Types"; }
+        }
+
+        public override ProjectLanguage DefaultProjectLanguage
+        {
+            get { return ProjectLanguage.VBASIC; }
         }
 
         protected void RunTest(string testName, Action<IEnumerable<RegistrationInfo>> action)

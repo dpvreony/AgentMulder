@@ -15,7 +15,7 @@ namespace AgentMulder.Containers.AutofacVB.Patterns
     {
         private static readonly IStructuralSearchPattern pattern =
             new VBStructuralSearchPattern("$builder$.RegisterType(Of $type$)()",
-               new ExpressionPlaceholder("builder", "Global.Autofac.ContainerBuilder"),
+                new ExpressionPlaceholder("builder", "Global.Autofac.ContainerBuilder"),
                 new TypePlaceholder("type"));
 
         public RegisterTypeGeneric()
