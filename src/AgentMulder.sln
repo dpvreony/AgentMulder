@@ -26,6 +26,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgentMulder.Containers.Unit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgentMulder.Containers.Autofac", "AgentMulder.Containers.Autofac\AgentMulder.Containers.Autofac.csproj", "{2AF8CA35-EA61-46F6-8604-BF1E48009EE2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgentMulder.Containers.AutofacVB", "AgentMulder.Containers.AutofacVB\AgentMulder.Containers.AutofacVB.csproj", "{4D5DFA0A-AF5A-458D-9516-028FA29FDFB8}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "TestApplicationVB", "Test\Data\VB\TestApplicationVB.vbproj", "{4FC019D3-7FA2-4904-941B-A53DCC53B862}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -62,6 +66,13 @@ Global
 		{2AF8CA35-EA61-46F6-8604-BF1E48009EE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2AF8CA35-EA61-46F6-8604-BF1E48009EE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2AF8CA35-EA61-46F6-8604-BF1E48009EE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D5DFA0A-AF5A-458D-9516-028FA29FDFB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D5DFA0A-AF5A-458D-9516-028FA29FDFB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D5DFA0A-AF5A-458D-9516-028FA29FDFB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D5DFA0A-AF5A-458D-9516-028FA29FDFB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FC019D3-7FA2-4904-941B-A53DCC53B862}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FC019D3-7FA2-4904-941B-A53DCC53B862}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FC019D3-7FA2-4904-941B-A53DCC53B862}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -69,10 +80,12 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{C6154279-CFEE-47FC-8F17-F901A5636B0A} = {F0AF21D8-9FFB-4641-AA4A-404A86F9029D}
 		{2A40748D-310D-4193-A2E8-079A53040A93} = {F0AF21D8-9FFB-4641-AA4A-404A86F9029D}
+		{4FC019D3-7FA2-4904-941B-A53DCC53B862} = {F0AF21D8-9FFB-4641-AA4A-404A86F9029D}
 		{A9390BE1-FACF-4FBF-8B5F-71E6927A7B60} = {0AFEAB16-D259-49ED-A30C-08B4D9997E48}
 		{E1798D1B-C0DC-4A17-8683-230E89960E49} = {0AFEAB16-D259-49ED-A30C-08B4D9997E48}
 		{4EF1B908-98A3-4D6F-A243-78CA102BE445} = {0AFEAB16-D259-49ED-A30C-08B4D9997E48}
 		{2AF8CA35-EA61-46F6-8604-BF1E48009EE2} = {0AFEAB16-D259-49ED-A30C-08B4D9997E48}
+		{4D5DFA0A-AF5A-458D-9516-028FA29FDFB8} = {0AFEAB16-D259-49ED-A30C-08B4D9997E48}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.0\lib\NET35

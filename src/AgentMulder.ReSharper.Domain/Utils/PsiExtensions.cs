@@ -5,7 +5,10 @@ using JetBrains.ProjectModel.Model2.Assemblies.Interfaces;
 using JetBrains.ReSharper.Psi;
 using JetBrains.ReSharper.Psi.CSharp;
 using JetBrains.ReSharper.Psi.CSharp.Tree;
+using JetBrains.ReSharper.Psi.VB;
+using JetBrains.ReSharper.Psi.VB.Tree;
 using JetBrains.Util;
+using IReferenceExpression = JetBrains.ReSharper.Psi.CSharp.Tree.IReferenceExpression;
 
 namespace AgentMulder.ReSharper.Domain.Utils
 {
@@ -84,6 +87,21 @@ namespace AgentMulder.ReSharper.Domain.Utils
         public static INamespace GetNamespaceDeclaration(ICSharpExpression expression)
         {
             CSharpElementFactory elementFactory = CSharpElementFactory.GetInstance(expression.GetPsiModule());
+
+            if (expression.ConstantValue != null &&
+                expression.ConstantValue.IsString())
+            {
+                string namespaceName = Convert.ToString(expression.ConstantValue.Value);
+
+                return elementFactory.CreateNamespaceDeclaration(namespaceName).DeclaredElement;
+            }
+
+            return null;
+        }
+
+        public static INamespace GetNamespaceDeclaration(IVBExpression expression)
+        {
+            VBElementFactory elementFactory = VBElementFactory.GetInstance(expression.GetPsiModule());
 
             if (expression.ConstantValue != null &&
                 expression.ConstantValue.IsString())

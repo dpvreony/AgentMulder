@@ -70,10 +70,15 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AuotfacVB\ContainerBuilderTests.cs" />
+    <Compile Include="AuotfacVB\Helpers\TestAutofacVBAttribute.cs" />
+    <Compile Include="AuotfacVB\RegisterAssemblyTypesTests.cs" />
+    <Compile Include="AuotfacVB\TestStructuralPatternRegisterType.cs" />
     <Compile Include="Autofac\ContainerBuilderTests.cs" />
     <Compile Include="Autofac\RegisterAssemblyTypesTests.cs" />
     <Compile Include="Autofac\Helpers\TestAutofacAttribute.cs" />
     <Compile Include="ComponentRegistrationsTestBase.cs" />
+    <Compile Include="ComponentRegistrationsTestBaseVB.cs" />
     <Compile Include="Ninject\Helpers\TestNinjectAttribute.cs" />
     <Compile Include="Ninject\KernelTests.cs" />
     <Compile Include="Ninject\ModuleTests.cs" />
@@ -89,6 +94,10 @@
     <Compile Include="Windsor\SanityTests.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AgentMulder.Containers.AutofacVB\AgentMulder.Containers.AutofacVB.csproj">
+      <Project>{4D5DFA0A-AF5A-458D-9516-028FA29FDFB8}</Project>
+      <Name>AgentMulder.Containers.AutofacVB</Name>
+    </ProjectReference>
     <ProjectReference Include="..\AgentMulder.Containers.Autofac\AgentMulder.Containers.Autofac.csproj">
       <Project>{2AF8CA35-EA61-46F6-8604-BF1E48009EE2}</Project>
       <Name>AgentMulder.Containers.Autofac</Name>
