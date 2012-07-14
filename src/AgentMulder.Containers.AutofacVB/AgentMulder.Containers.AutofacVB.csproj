@@ -80,8 +80,6 @@
     <Compile Include="Patterns\FromAssemblies\RegisterAssemblyTypes.cs" />
     <Compile Include="Patterns\Helpers\AutofacModuleThisAssemblyExtractor.cs" />
     <Compile Include="Patterns\Helpers\ReturnTypeCollector.cs" />
-    <Compile Include="Patterns\RegisterLambdaExpression.cs" />
-    <Compile Include="Patterns\RegisterLambdaStatements.cs" />
     <Compile Include="Patterns\RegisterTypeGeneric.cs" />
     <Compile Include="Patterns\RegisterTypeNonGeneric.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

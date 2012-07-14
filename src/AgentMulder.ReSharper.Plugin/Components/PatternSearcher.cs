@@ -12,6 +12,7 @@ using JetBrains.ReSharper.Psi.Caches;
 using JetBrains.ReSharper.Psi.Search;
 using JetBrains.ReSharper.Psi.Services.StructuralSearch;
 using JetBrains.ReSharper.Psi.Services.StructuralSearch.Impl;
+using JetBrains.ReSharper.Psi.VB;
 using JetBrains.Util;
 
 namespace AgentMulder.ReSharper.Plugin.Components
@@ -60,7 +61,7 @@ namespace AgentMulder.ReSharper.Plugin.Components
             var documentManager = solution.GetComponent<DocumentManager>();
 
             // todo add support for VB (eventually)
-            var structuralSearcher = new StructuralSearcher(documentManager, CSharpLanguage.Instance, matcher);
+            var structuralSearcher = new StructuralSearcher(documentManager, VBLanguage.Instance, matcher);
             var searchDomainSearcher = new StructuralSearchDomainSearcher<IStructuralMatchResult>(
                 NarrowSearchDomain(solution, matcher.Words, matcher.GetExtendedWords(solution), searchDomain),
                 structuralSearcher, consumer, NullProgressIndicator.Instance, true);

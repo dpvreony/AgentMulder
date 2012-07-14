@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using AgentMulder.ReSharper.Domain.Registrations;
@@ -20,6 +21,10 @@ namespace AgentMulder.ReSharper.Domain.Patterns
         protected RegistrationPatternBase(IStructuralSearchPattern pattern)
         {
             matcher = pattern.CreateMatcher();
+            if (pattern.Check() != null)
+            {
+                throw new Exception(pattern.SearchPattern);
+            }
         }
 
         private IInvocationExpression GetMatchedExpression(ITreeNode element)

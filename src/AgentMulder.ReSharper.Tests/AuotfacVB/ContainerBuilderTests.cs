@@ -1,5 +1,6 @@
 using System.Linq;
 using AgentMulder.Containers.Autofac;
+using AgentMulder.Containers.AutofacVB;
 using AgentMulder.ReSharper.Domain.Containers;
 using AgentMulder.ReSharper.Tests.AuotfacVB.Helpers;
 using JetBrains.ReSharper.Psi;
@@ -19,7 +20,7 @@ namespace AgentMulder.ReSharper.Tests.AuotfacVB
 
         protected override IContainerInfo ContainerInfo
         {
-            get { return new AutofacContainerInfo(); }
+            get { return new AutofacVBContainerInfo(); }
         }
 
         [TestCase("RegisterTypeGeneric", new[] { "CommonImpl1.vb" })]
