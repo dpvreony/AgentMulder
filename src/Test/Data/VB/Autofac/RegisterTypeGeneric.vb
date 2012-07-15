@@ -9,7 +9,4 @@ Namespace Autofac
         End Sub
 
     End Class
-
-    Public Class CommonImpl1
-    End Class
 End Namespace

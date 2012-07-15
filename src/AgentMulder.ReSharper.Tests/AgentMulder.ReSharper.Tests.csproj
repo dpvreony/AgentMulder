@@ -70,10 +70,9 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AuotfacVB\ContainerBuilderTests.cs" />
-    <Compile Include="AuotfacVB\Helpers\TestAutofacVBAttribute.cs" />
-    <Compile Include="AuotfacVB\RegisterAssemblyTypesTests.cs" />
-    <Compile Include="AuotfacVB\TestStructuralPatternRegisterType.cs" />
+    <Compile Include="AutotfacVB\ContainerBuilderTests.cs" />
+    <Compile Include="AutotfacVB\Helpers\TestAutofacVBAttribute.cs" />
+    <Compile Include="AutotfacVB\RegisterAssemblyTypesTests.cs" />
     <Compile Include="Autofac\ContainerBuilderTests.cs" />
     <Compile Include="Autofac\RegisterAssemblyTypesTests.cs" />
     <Compile Include="Autofac\Helpers\TestAutofacAttribute.cs" />
