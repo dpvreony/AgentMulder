@@ -16,8 +16,7 @@ Public Class TestEnvironmentAssembly
         ReentrancyGuard.Current.Execute("LoadAssemblies", Function()
 
                                                           End Function)
-        Shell.Instance.GetComponent(Of AssemblyManager)()
-.LoadAssemblies(GetType().Name, GetAssembliesToLoad()
+        Shell.Instance.GetComponent(Of AssemblyManager)().LoadAssemblies(GetType().Name, GetAssembliesToLoad())
     End Sub
 
     Public Overrides Sub TearDown()
