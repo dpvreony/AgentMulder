@@ -7,4 +7,8 @@ using System.Runtime.CompilerServices;
 [assembly: InternalsVisibleTo("AgentMulder.Containers.CastleWindsor")]
 [assembly: InternalsVisibleTo("AgentMulder.Containers.Ninject")]
 [assembly: InternalsVisibleTo("AgentMulder.Containers.Unity")]
+<<<<<<< HEAD
 [assembly: InternalsVisibleTo("AgentMulder.Containers.StructureMap")]
+=======
+[assembly: InternalsVisibleTo("AgentMulder.Containers.AutofacVB")]
+>>>>>>> vb/feature/vb-support
